@@ -1,0 +1,95 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Basics</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <style>
+        p{
+            color: red;
+        }
+        #p2{
+            color: blue; 
+        }
+        .txt{
+            color: orange;
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            height: 1000px;
+            width: 1000px;
+            margin: 10px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3{
+            color: teal;
+            font-size: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        label{
+            color: teal;
+            display: block;
+            padding: 5px;
+        }
+        input[type="text"] {
+            width:250px;
+            height:30px;
+        }
+        button{
+            padding: 10px;
+            display: block;
+            margin-top: 15px;
+            font-size: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- getting elements using id  -->
+   <h1 class="txt">Heading Tag</h1>
+   <p class="txt">Para Tag-1</p>
+   <p id="p2">Para Tag-2</p>    <!-- Id is only used by one element -->
+   <p class="txt">Para Tag-3</p> <!-- Class is used many times -->
+   <h3 class="txt">Sample Heading</h3>
+
+    <h3>Get Elements By Id </h3>    
+   <button onclick="idElement()">Click</button> <!-- By clicking this button idElement() function called  -->
+   <button onclick="setElement()">Click</button> <!-- By clicking this button setElement() function called  -->
+    
+    <!-- getting elements using Class Name  -->
+   <h3>Get Elements By Class Name</h3>
+   <form class="myForm">   <!-- created a form by id name myForm for reset purpose  -->
+        <label for="mark1">Mark-1</label>
+        <input type="text" class="mark" id="mark1"> <!-- input Mark-1 is taken  -->
+        <label for="mark2">Mark-2</label>
+        <input type="text" class="mark" id="mark2"> <!-- input Mark-2 is taken  -->
+        <label for="mark2">Mark-3</label>
+        <input type="text" class="mark" id="mark3"> <!-- input Mark-3 is taken  -->
+        <button onclick="getResult()">Result</button> <!-- function getResult() is called by clicking this button --> 
+        <button onclick="resetForm()">Reset</button> <!-- function resetForm() is called by clicking this button -->
+   </form>
+    <h3>Get Elements by Name</h3>
+    <label for="gender">Gender</label>
+        <input type="radio" value="male" name="gen">Male <!-- if 'name' is not given both radio will get selected -->
+        <input type="radio" value="female" name="gen">Female
+    <button onclick="getbyName()">Gender</button>
+    
+   
+    <script src="domfunctions.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
